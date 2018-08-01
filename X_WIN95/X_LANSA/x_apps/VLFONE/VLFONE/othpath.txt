@@ -1,0 +1,2 @@
+DFTPATH   *PART_DIR_EXECUTE                                                                                                                                                                                                                                   
+PARTVLWEB *PART_WEB_VL                                                                                                                                                                                                                                        
