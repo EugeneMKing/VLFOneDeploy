@@ -1,0 +1,105 @@
+﻿D	 	1	0	MYEMPTY Framework	 
+V	 	1	0	20180710153922	 
+B	VF_FP001O	1	0	B645DDCB6F1F4BF5817928CAE51BA7E0	X
+P	 	702	1	FRAMEWORK_MYEMPTY	 
+P	 	1	1	MYEMPTY Framework	 
+P	 	2	1	MYEMPTY Framework	 
+P	 	3	1	1	 
+P	 	4	1	FRAMEWORK_MYEMPTY	 
+P	 	6	1	THE_INTERNET_OUTLINE.PNG	 
+P	 	101	1	158:158:158	 
+P	 	102	1	158:158:158	 
+P	 	217	1	20	 
+P	 	218	1	300	 
+P	 	222	1	<your application name> Copyright 2017 <your organization name>. All rights reserved.	 
+P	 	222	2	 	 
+P	 	222	3	This is version NNN dated xxxxxxxxxxxxxxxx.	 
+P	 	222	4	 	 
+P	 	222	5	<Your application name> - General Usage Disclaimer	 
+P	 	222	6	 	 
+P	 	222	7	This software is provided by the copyright holders, authors, and contributors as is and any express	 
+P	 	222	8	or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular	 
+P	 	222	9	purpose are disclaimed. In no event shall the copyright holder or any authors or contributors be liable for any direct, indirect,	 
+P	 	222	10	incidental, special, exemplary, or consequential damages (including, but not limited to, procurement of substitute goods or services	 
+P	 	222	11	loss of use, data, or profits; or business interruption) however caused, and on any theory of liability, whether in contract, strict	 
+P	 	222	12	liability, or tort (including negligence or otherwise) arising in any way out of the use of this software.	 
+P	 	222	13	 	 
+P	 	222	14	<Your application name> - Storage of personal and device information.	 
+P	 	222	15	 	 
+P	 	222	16	No personal or device information is collected by xxxxxxxxxxx.	 
+P	 	224	1	https://www.lansa.com/services/support.htm	 
+P	 	243	1	1024x768 - XGA	 
+P	 	244	1	768	 
+P	 	245	1	1024	 
+P	 	243	2	1280x800 - WXGA	 
+P	 	244	2	800	 
+P	 	245	2	1280	 
+P	 	243	3	1366x768 - WXGA	 
+P	 	244	3	768	 
+P	 	245	3	1366	 
+P	 	243	4	1600x900 - WXGA	 
+P	 	244	4	900	 
+P	 	245	4	1600	 
+P	 	243	5	1920x1080 - HD	 
+P	 	244	5	1080	 
+P	 	245	5	1920	 
+P	 	243	6	iPad Portrait - 768x1024	 
+P	 	244	6	1024	 
+P	 	245	6	768	 
+P	 	243	7	iPad Landscape - 1024x768	 
+P	 	244	7	768	 
+P	 	245	7	1024	 
+P	 	243	8	S Galaxy Tab Portrait 600x1024	 
+P	 	244	8	1024	 
+P	 	245	8	600	 
+P	 	243	9	S Galaxy Tab Landscape 1024x600	 
+P	 	244	9	600	 
+P	 	245	9	1024	 
+P	 	243	10	S Galaxy Tab 10.1 Portrait 800x1280	 
+P	 	244	10	1280	 
+P	 	245	10	800	 
+P	 	243	11	S Galaxy Tab 10.1 Landscape 1280x800	 
+P	 	244	11	800	 
+P	 	245	11	1280	 
+P	 	243	12	Samsung Galaxy S7 360x640	 
+P	 	244	12	640	 
+P	 	245	12	360	 
+P	 	243	13	Samsung Galaxy S7 Landscape 640x360	 
+P	 	244	13	360	 
+P	 	245	13	640	 
+P	 	243	14	Samsung Galaxy S8 360x740	 
+P	 	244	14	740	 
+P	 	245	14	360	 
+P	 	243	15	Samsung Galaxy S8 Landscape 740x360	 
+P	 	244	15	360	 
+P	 	245	15	740	 
+P	 	243	16	iPhone 7,8 375x667	 
+P	 	244	16	667	 
+P	 	245	16	375	 
+P	 	243	17	iPhone 7,8 Landscape 667x375	 
+P	 	244	17	375	 
+P	 	245	17	667	 
+P	 	243	18	iPhone 7+,8+ 414x736	 
+P	 	244	18	736	 
+P	 	245	18	414	 
+P	 	243	19	iPhone 7+,8+ Landscape 736x414	 
+P	 	244	19	414	 
+P	 	245	19	736	 
+P	 	243	20	iPhone X 375x812	 
+P	 	244	20	812	 
+P	 	245	20	375	 
+P	 	243	21	iPhone X Landscape 812x375	 
+P	 	244	21	375	 
+P	 	245	21	812	 
+P	 	248	1	TRUE	 
+P	 	249	1	1	 
+P	 	250	1	0	 
+P	 	251	1	0	 
+P	 	252	1	728	 
+B	VF_FP202O	1	0	VF_FP202O_1	 
+P	 	201	0	B645DDCB6F1F4BF5817928CAE51BA7E0	 
+P	 	202	1	MYEMPTY	 
+P	 	202	2	Framework	 
+P	 	203	2	MYEMPTY Framework	 
+E	VF_FP202O	1	0	VF_FP202O_1	 
+E	VF_FP001O	1	0	B645DDCB6F1F4BF5817928CAE51BA7E0	 

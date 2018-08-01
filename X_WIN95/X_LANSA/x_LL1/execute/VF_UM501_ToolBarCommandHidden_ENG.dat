@@ -1,0 +1,19 @@
+* ---------------------------------------------------------------------------------
+* This is the "<<CAPTION>>" command handler for framework <<FRAMEWORK>>
+* Created <<CREATEDDATE>> by <<CREATEDUSER>> with Windows desktop style controls.<<COND_NOT_MD>>
+* Created <<CREATEDDATE>> by <<CREATEDUSER>> with Material Design style controls.<<COND_MD>>  
+* It is a framework level command executed from the toolbar
+* ---------------------------------------------------------------------------------
+Begin_Com Role(*EXTENDS #VF_AC010O) Height(185) Width(441)
+
+Mthroutine Name(uExecute) Options(*REDEFINE)
+
+* Do the ancestor thing
+Invoke Method(#Com_Ancestor.uExecute) Gotofreestate(#GotoFreeState) Switchcallerreference(#SwitchCallerReference)
+
+* Add your custom logic here .....
+#SYS_WEB.Alert Caption("Command <<CAPTION>> executed by <<OBJECT_NAME>>. Replace this message with your custom logic.")
+
+Endroutine
+
+End_Com

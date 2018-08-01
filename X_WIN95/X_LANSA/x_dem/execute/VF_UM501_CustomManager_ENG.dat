@@ -1,0 +1,22 @@
+* ------------------------------------------------------------------------------
+* This is the custom manager for framework <<FRAMEWORK>>
+* Created <<CREATEDDATE>> by <<CREATEDUSER>> with Windows desktop style controls.<<COND_NOT_MD>>
+* Created <<CREATEDDATE>> by <<CREATEDUSER>> with Material Design style controls.<<COND_MD>>  
+* ------------------------------------------------------------------------------
+Begin_Com Role(*EXTENDS #VF_AC036O)
+* -----------------------------------------------------------------------------
+* Standard initialization
+* -----------------------------------------------------------------------------
+Mthroutine Name(uInitialize) Options(*REDEFINE)
+* Do the ancestor default behaviour
+#COM_ANCESTOR.uInitialize
+Endroutine
+* -----------------------------------------------------------------------------
+* Standard termination
+* -----------------------------------------------------------------------------
+Mthroutine Name(uTerminate) Options(*REDEFINE)
+* Do the ancestor default behaviour
+#COM_ANCESTOR.uTerminate
+Endroutine
+* -----------------------------------------------------------------------------
+End_Com

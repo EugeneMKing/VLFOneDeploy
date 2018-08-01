@@ -1,0 +1,152 @@
+* ---------------------------------------------------------------------------------
+* This is a command handler in framework <<FRAMEWORK>>.
+* It belongs to business object <<BUSINESS_OBJECT_CAPTION>>.
+* Created <<CREATEDDATE>> by <<CREATEDUSER>> with Windows desktop style controls.<<COND_NOT_MD>>
+* Created <<CREATEDDATE>> by <<CREATEDUSER>> with Material Design style controls.<<COND_MD>>  
+* ---------------------------------------------------------------------------------
+Begin_Com Role(*EXTENDS #VF_AC012O) Height(209) Width(825) Layoutmanager(#MainAttachmentManager)
+
+* Layout Managment
+Define_Com Class(#PRIM_ATLM) Name(#MainAttachmentManager)
+Define_Com Class(#PRIM_ATLI) Name(#Attach_VisualizedInstanceList) Manage(#VisualizedInstanceList) Parent(#MainAttachmentManager) Attachment(Center)
+
+<<COND_NOT_MD>>* Use a #PRIM_LIST is used to visualize the details of a business object instance
+<<COND_NOT_MD>>Define_Com Class(#Prim_list) Name(#VisualizedInstanceList) Parent(#COM_OWNER) Displayposition(1) Tabposition(1) Height(209) Width(825) Left(0) Top(0) Columnlines(False) Rowlines(False)
+
+* The visible list and columns layout and definition
+<<COND_NOT_MD>><<EXPAND_CUSTOM_BROWSER>>  <<PARM2=True>> <<PARM1=Define_Com Class(#PRIM_LIST.%LISTTYPE%) Name(#COL_%TARGET%) Displayposition(1) Parent(#VisualizedInstanceList) Source(#%TARGET%) Sortonclick(True) Columncaptiontype(Caption) Columncaption('%LABEL%') >>
+
+<<COND_MD>>Define_Com Class(#PRIM_TBLO) Name(#LayoutList)
+<<COND_MD>>Define_Com Class(#PRIM_TBLO.Column) Name(#LayoutListColumn1) Displayposition(1) Parent(#LayoutList)
+<<COND_MD>>Define_Com Class(#PRIM_TBLO.Row) Name(#LayoutListRow1) Displayposition(1) Parent(#LayoutList)
+<<COND_MD>>Define_Com Class(#PRIM_TBLO.Item) Name(#LayoutListItem1) Alignment(CenterLeft) Column(#LayoutListColumn1) Manage(#ListIcon) Marginleft(8) Parent(#LayoutList) Row(#LayoutListRow1) Sizing(None)
+<<COND_MD>>Define_Com Class(#PRIM_TBLO.Item) Name(#LayoutListItem3) Alignment(CenterLeft) Column(#LayoutListColumn1) Flow(CenterVertical) Manage(#ListPrimaryText) Marginleft(68) Marginright(8) Parent(#LayoutList) Row(#LayoutListRow1) Sizing(ContentHeightFitToWidth)
+<<COND_MD>>Define_Com Class(#PRIM_TBLO.Item) Name(#LayoutListItem4) Alignment(CenterLeft) Column(#LayoutListColumn1) Flow(CenterVertical) Manage(#ListSecondaryText) Marginleft(68) Marginright(8) Parent(#LayoutList) Row(#LayoutListRow1) Sizing(ContentHeightFitToWidth)
+<<COND_MD>>Define_Com Class(#PRIM_TBLO.Item) Name(#LayoutListItem5) Alignment(CenterLeft) Column(#LayoutListColumn1) Flow(CenterVertical) Manage(#ListTertiaryText) Marginleft(68) Marginright(8) Parent(#LayoutList) Row(#LayoutListRow1) Sizing(ContentHeightFitToWidth)
+
+<<COND_MD>>Define_Com Class(#PRIM_MD.List) Name(#VisualizedInstanceList) Displayposition(1) Layoutmanager(#LayoutList) Left(104) Parent(#COM_OWNER) Rowheight(100) Tabposition(1) Themedrawstyle('Card') Top(117)
+<<COND_MD>>Define_Com Class(#PRIM_MD.ListLabel) Name(#ListIcon) Displayposition(1) Height(40) Icon('image') Iconalignment(Center) Iconimagesizing(Cropped) Left(8) Parent(#VisualizedInstanceList) Tabposition(1) Themedrawstyle('MediumTitle+Rounded') Top(30) Width(40)
+<<COND_MD>>Define_Com Class(#PRIM_MD.ListLabel) Name(#ListPrimaryText) Caption('Three line item') Displayposition(3) Height(23) Left(68) Parent(#VisualizedInstanceList) Tabposition(3) Themedrawstyle('Heading3') Top(19) Width(202) WordWrap(True)
+<<COND_MD>>Define_Com Class(#PRIM_MD.ListLabel) Name(#ListSecondaryText) Caption('Secondary Text') Displayposition(4) Height(20) Left(68) Parent(#VisualizedInstanceList) Tabposition(4) Top(42) Width(202) WordWrap(True)
+<<COND_MD>>Define_Com Class(#PRIM_MD.ListLabel) Name(#ListTertiaryText) Caption('Tertiary Text') Displayposition(5) Height(40) Left(68) Parent(#VisualizedInstanceList) Tabposition(5) Themedrawstyle('ForegroundSecondary') Top(62) Width(202) WordWrap(True)
+
+<<COND_NOT_MD>>* ---------------------------------------------------------------------------------------
+<<COND_NOT_MD>>* Watermark this as a custom browser so it stands out - please delete these 2 lines later
+<<COND_NOT_MD>>Define_Com Class(#PRIM_LABL) Name(#RemoveThisLabel) Parent(#COM_OWNER) Top(70) Left(20) Caption('Custom Instance List Browser') Displayposition(2) Tabposition(2) Tabstop(False) Height(111) Width(527) Style(#HugeFont) Verticalalignment(Center) Alignment(Center) Opacity(30) Rotation(20)
+<<COND_NOT_MD>>Define_Com Class(#Prim_vs.Style) Name(#HugeFont) Fontsize(26) Bold(True) Textcolor(Gray) Fontunits(Pixel)
+* ---------------------------------------------------------------------------------------
+* Redefine the standard uClearInstanceList method
+Mthroutine Name(uClearInstanceList) Options(*Redefine)
+
+Clr_List Named(#VisualizedInstanceList)
+
+Endroutine
+
+* ---------------------------------------------------------------------------------------
+* Redefine the standard uPutListEntryData method
+Mthroutine Name(uPutListEntryData) Options(*REDEFINE)
+
+<<COND_NOT_MD>>Define_Com Class(#PRIM_LIST.ListItem) Name(#CurrentListItem) Reference(*DYNAMIC)
+<<COND_MD>>Define_Com Class(#PRIM_MD.ListItem) Name(#CurrentListItem) Reference(*DYNAMIC)
+
+* Is there a list entry for this DataItem already?
+#CurrentListItem <= #VisualizedInstanceList.FindReference( #DataItem )
+
+* If yes, get it so that it can be updated
+If (#CurrentListItem *IsNot *NULL)
+Get_Entry Number(#CurrentListItem.Entry) From_List(#VisualizedInstanceList)
+Endif
+
+<<COND_NOT_MD>>* Map data into the list columns
+<<COND_NOT_MD>><<EXPAND_CUSTOM_BROWSER>> <<PARM2=False>> <<PARM1=#%TARGET% := #DataItem.%SOURCE%>>
+<<COND_MD>>* Put default data into the display. Customize to your exact requirements.  
+<<COND_MD>>#ListPrimaryText := #DataItem.avVisualID1
+<<COND_MD>>#ListSecondaryText := #DataItem.avVisualID2
+<<COND_MD>>#ListTertiaryText := #DataItem.avMakeColumnDetailsString(False False)
+
+* Add/update details to the visible instance list
+If (#CurrentListItem *IsNot *NULL)
+Upd_Entry In_List(#VisualizedInstanceList)
+Else
+Add_Entry To_List(#VisualizedInstanceList)
+#CurrentListItem <= #VisualizedInstanceList.CurrentItem
+Endif
+
+* Remember which DataItem is associated with this list line
+#CurrentListItem.RelatedReference <= #DataItem
+#CurrentListItem.Selected := #DataItem.avIsSelected
+
+Endroutine
+
+* ---------------------------------------------------------------------------------------
+* Redefine the standard uDeleteListEntryData method
+Mthroutine Name(uDeleteListEntryData) Options(*REDEFINE)
+
+<<COND_NOT_MD>>Define_Com Class(#PRIM_LIST.ListItem) Name(#CurrentListItem) Reference(*DYNAMIC)
+<<COND_MD>>Define_Com Class(#PRIM_MD.ListItem) Name(#CurrentListItem) Reference(*DYNAMIC)
+
+#CurrentListItem <= #VisualizedInstanceList.FindReference( #DataItem )
+If (#CurrentListItem *IsNot *NULL)
+Dlt_Entry Number(#CurrentListItem.Entry)
+Endif
+
+Endroutine
+
+* ---------------------------------------------------------------------------------------
+* Handle list item event ItemGotFocus
+Evtroutine Handling(#VisualizedInstanceList.ItemGotFocus)
+
+Define_Com Class(#vf_lm003O) Name(#DataItem) Reference(*DYNAMIC)
+
+If (#COM_OWNER.UIisLocked.Not)
+
+#DataItem <= #VisualizedInstanceList.CurrentItem.RelatedReference *As #VF_LM003O
+
+* Make this the current item
+#DataItem.avIsCurrent := True
+
+* Execute any default command
+#DataItem.avExecuteDefaultCommand
+
+EndIf
+
+Endroutine
+
+* ---------------------------------------------------------------------------------------
+* Handle list item event ItemGotSelection
+Evtroutine Handling(#VisualizedInstanceList.ItemGotSelection)
+If (#COM_OWNER.UIisLocked.Not)
+(#VisualizedInstanceList.CurrentItem.RelatedReference *As #VF_LM003O).avIsSelected := True
+EndIf
+Endroutine
+
+* ---------------------------------------------------------------------------------------
+* Handle list item event ItemGotSelection
+Evtroutine Handling(#VisualizedInstanceList.ItemLostSelection)
+If (#COM_OWNER.UIisLocked.Not)
+(#VisualizedInstanceList.CurrentItem.RelatedReference *As #VF_LM003O).avIsSelected := False
+Endif
+Endroutine
+
+* ---------------------------------------------------------------------------------------
+* This stops the command handler from popping under the instance list
+Evtroutine Handling(#Com_owner.Click) Handled(#Handled)
+* "Eat" any click event on this control to prevent them flowing up to the container control
+#Handled := True
+Endroutine
+
+* ---------------------------------------------------------------------------------------
+* Handle quick searching
+Mthroutine Name(uPerformQuickSearch) Options(*REDEFINE)
+<<COND_NOT_MD>>#COM_ANCESTOR.uHandleQuickSearchbyDefault Searchstring(#SearchString) Inprimlist(#VisualizedInstanceList)
+<<COND_MD>>* Add your custom logic here 
+Endroutine
+
+* ---------------------------------------------------------------------------------------
+* Cancel quick search
+Mthroutine Name(uCancelQuickSearching) Options(*REDEFINE)
+<<COND_NOT_MD>>#COM_ANCESTOR.uHandleQuickSearchCancelbyDefault Inprimlist(#VisualizedInstanceList)
+<<COND_MD>>* Add your custom logic here 
+Endroutine
+
+End_Com

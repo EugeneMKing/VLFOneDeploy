@@ -1,0 +1,5 @@
+GITVLFONE__Framework.XML
+MYEMPTY_Framework.XML
+vf_sy001_system.xml
+VF_VLFONE_SYSTEM.XML
+VLFMASTER_Framework.XML

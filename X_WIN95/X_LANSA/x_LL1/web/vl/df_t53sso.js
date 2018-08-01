@@ -1,0 +1,2 @@
+﻿LANSA.addComponent({id:"DF_T53SSO",ot:"rp",tp:"Reusable Part",de:"\\OS=Business Object 103 Server Object",tl:14020008},function(l,oI,u){var cO=l.rC(oI,{an:"PRIM_OBJT",mt:{InitalizeServiceRoutine:{},TerminateServiceRoutine:{}},co:function(){cO.aN.call(this);}});cO.mthINITALIZESERVICEROUTINE=function(){var r=l.mR(this,cO,"InitalizeServiceRoutine",33);r.ln=33;{}r.ln=42;r.e();};cO.mthTERMINATESERVICEROUTINE=function(){var r=l.mR(this,cO,"TerminateServiceRoutine",44);r.ln=44;{}r.ln=48;r.e();};},{rp:["PRIM_OBJT"]
+});

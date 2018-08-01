@@ -1,0 +1,84 @@
+* ---------------------------------------------------------------------------------
+* This is a command handler in framework <<FRAMEWORK>>.
+* It belongs to business object <<BUSINESS_OBJECT_CAPTION>>.
+* Created <<CREATEDDATE>> by <<CREATEDUSER>> with Windows desktop style controls.<<COND_NOT_MD>>
+* Created <<CREATEDDATE>> by <<CREATEDUSER>> with Material Design style controls.<<COND_MD>>  
+* ---------------------------------------------------------------------------------
+Begin_Com Role(*EXTENDS #VF_AC010O) Height(327) Width(587)
+
+
+Define_Com Class(#PRIM_ATLI) Name(#AttachItem1) Parent(#MainPanelAttachmentManager) Attachment(Center) Manage(#Map)
+Define_Com Class(#PRIM_ATLI) Name(#AttachItem2) Manage(#Panel_Top) Parent(#MainPanelAttachmentManager) Attachment(Top)
+
+* The Map displayer
+Define_Com Class(#PRIM_WEB.Page) Name(#Map) Description('Google Map') Displayposition(2) Height(262) Parent(#COM_OWNER) Tabposition(1) Tabstop(False) Width(587) Top(65)
+
+* Top Panel
+Define_Com Class(#PRIM_PANL) Name(#Panel_Top) Displayposition(1) Left(0) Parent(#COM_OWNER) Tabposition(2) Tabstop(False) Top(0) Width(587) Height(65)
+
+* The location drop down
+<<COND_MD>>Define_Com Class(#PRIM_MD.Dropdown) Name(#DropDownofLocations) Displayposition(1) Left(8) Parent(#Panel_Top) Tabposition(1) Top(8) Width(300) Caption('Select a Location')
+<<COND_NOT_MD>>Define_Com Class(#PRIM_LIST.DropDown) Name(#DropDownofLocations) Columnheaderheight(0) Columnlines(False) Displayposition(1) Left(8) Parent(#Panel_Top) Rowlines(False) Showselection(False) Tabposition(1) Top(40) Width(329)
+<<COND_NOT_MD>>Define_Com Class(#PRIM_LIST.String) Name(#Column1) Columnunits(Proportion) Columnwidth(1) Displayposition(1) Parent(#DropDownofLocations) Source(#STD_TEXTL)
+<<COND_NOT_MD>>Define_Com Class(#PRIM_LIST.String) Name(#Column2) Columnunits(Proportion) Columnwidth(1) Displayposition(2) Parent(#DropDownofLocations) Source(#STD_STRNG) Columnvisible(False)
+
+<<COND_NOT_MD>>* The instruction
+<<COND_NOT_MD>>Define_Com Class(#PRIM_LABL) Name(#Label1) Caption('Select a location') Displayposition(2) Ellipses(Word) Height(25) Left(8) Parent(#Panel_Top) Tabposition(2) Tabstop(False) Top(8) Verticalalignment(Center) Width(329)
+
+* Lists for accessing server data
+Def_List Name(#ServerDataItems) Fields(#STD_TextL #Std_Strng) Type(*Working) Entrys(*MAX)
+
+Mthroutine Name(uInitialize) Options(*REDEFINE)
+Define_Com Class(<<SERVER_MODULE>>.GetData) Name(#GetData)
+
+* Go to busy state
+#COM_OWNER.avGotoBusyState Showbusytext('Searching') Animated(False)
+
+* Ask Server Module to get the data from the server
+#GetData.ExecuteAsync Serverdataitems(#ServerDataItems)
+
+* Go back to display free state
+#com_Owner.avGotoFreeState
+
+* Handle completion 
+Evtroutine Handling(#GetData.Completed)
+
+<<COND_NOT_MD>>* Get the URLs for the locations
+<<COND_NOT_MD>>Selectlist Named(#ServerDataItems)
+<<COND_NOT_MD>>Add_Entry To_List(#DropDownofLocations)
+<<COND_NOT_MD>>Endselect
+<<COND_NOT_MD>>
+<<COND_NOT_MD>>* Set focus to the first item
+<<COND_NOT_MD>>Selectlist Named(#DropDownofLocations)
+<<COND_NOT_MD>>#DropDownofLocations.CurrentItem.Focus := True
+<<COND_NOT_MD>>#Map.Source := #STD_STRNG
+<<COND_NOT_MD>>Leave
+<<COND_NOT_MD>>Endselect
+
+<<COND_MD>>* Get the URLs for the locations
+<<COND_MD>>Selectlist Named(#ServerDataItems)
+<<COND_MD>>#DropDownofLocations.Items.Add Caption(#STD_TextL) Value(#STD_STRNG)
+<<COND_MD>>Endselect
+<<COND_MD>>
+<<COND_MD>>* Set focus to the first item
+<<COND_MD>>If (#DropDownofLocations.Items.ItemCount > 0)
+<<COND_MD>>#DropDownofLocations.Items<1>.Focus := True
+<<COND_MD>>Endif
+
+Endroutine
+
+* Handle a failure 
+Evtroutine Handling(#GetData.Failed) Handled(#Handled)
+#Handled := #AVFRAMEWORKMANAGER.avHandleServerError( #COM_OWNER )
+Endroutine
+
+Endroutine
+* Handle map location selected
+<<COND_MD>>Evtroutine Handling(#DropDownofLocations.Changed)
+<<COND_MD>>#Map.Source := #DropDownofLocations.FocusItem.Value
+<<COND_MD>>Endroutine
+<<COND_NOT_MD>>Evtroutine Handling(#DropDownofLocations.ItemGotFocus)
+<<COND_NOT_MD>>#Map.Source := #STD_STRNG
+<<COND_NOT_MD>>Endroutine
+
+End_Com

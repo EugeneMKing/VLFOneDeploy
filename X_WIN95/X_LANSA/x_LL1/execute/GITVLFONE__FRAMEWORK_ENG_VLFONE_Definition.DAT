@@ -1,0 +1,309 @@
+﻿D	 	1	0	GITVLFONE_ Framework	 
+V	 	1	0	20180713111506	 
+B	VF_FP001O	1	0	15A464BE1807494FB00B8F8A3984F002	X
+P	 	701	1	GITVLF_7	 
+P	 	702	1	FRAMEWORK_GITVLFONE_	 
+B	VF_FP009O	1	0	1E4D6164EF4A480F9B8C48ABC5630A9F	 
+P	 	1	1	Details	 
+P	 	3	1	1	 
+P	 	4	1	COMMAND_DETAILS	 
+P	 	5	1	 	 
+P	 	6	1	MORE_DETAILS_OUTLINE.PNG	 
+E	VF_FP009O	1	0	1E4D6164EF4A480F9B8C48ABC5630A9F	 
+B	VF_FP009O	1	0	CB6148B620BF4FD7BD6676FADA709280	 
+P	 	1	1	Map	 
+P	 	3	1	1	 
+P	 	4	1	MAP	 
+P	 	5	1	 	 
+E	VF_FP009O	1	0	CB6148B620BF4FD7BD6676FADA709280	 
+B	VF_FP009O	1	0	C4BC437F26504AFB806B7106D5EFFDA5	 
+P	 	1	1	New	 
+P	 	2	1	Create a new thing	 
+P	 	3	1	1	 
+P	 	4	1	COMMAND_NEW	 
+P	 	5	1	 	 
+P	 	6	1	ADD_OUTLINE.PNG	 
+E	VF_FP009O	1	0	C4BC437F26504AFB806B7106D5EFFDA5	 
+B	VF_FP009O	1	0	8C0A4419D4B349DA9D45A98292AC1460	 
+P	 	1	1	Print	 
+P	 	3	1	1	 
+P	 	4	1	PRINT	 
+P	 	5	1	 	 
+E	VF_FP009O	1	0	8C0A4419D4B349DA9D45A98292AC1460	 
+P	 	1	1	GITVLFONE_ Framework	 
+P	 	2	1	GITVLFONE_ Framework	 
+P	 	3	1	1	 
+P	 	4	1	FRAMEWORK_GITVLFONE_	 
+P	 	6	1	THE_INTERNET_OUTLINE.PNG	 
+P	 	101	1	158:158:158	 
+P	 	102	1	158:158:158	 
+P	 	217	1	20	 
+P	 	218	1	300	 
+P	 	220	1	GITVLF_5	 
+P	 	222	1	<your application name> Copyright 2017 <your organization name>. All rights reserved.	 
+P	 	222	2	 	 
+P	 	222	3	This is version NNN dated xxxxxxxxxxxxxxxx.	 
+P	 	222	4	 	 
+P	 	222	5	<Your application name> - General Usage Disclaimer	 
+P	 	222	6	 	 
+P	 	222	7	This software is provided by the copyright holders, authors, and contributors as is and any express	 
+P	 	222	8	or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular	 
+P	 	222	9	purpose are disclaimed. In no event shall the copyright holder or any authors or contributors be liable for any direct, indirect,	 
+P	 	222	10	incidental, special, exemplary, or consequential damages (including, but not limited to, procurement of substitute goods or services	 
+P	 	222	11	loss of use, data, or profits; or business interruption) however caused, and on any theory of liability, whether in contract, strict	 
+P	 	222	12	liability, or tort (including negligence or otherwise) arising in any way out of the use of this software.	 
+P	 	222	13	 	 
+P	 	222	14	<Your application name> - Storage of personal and device information.	 
+P	 	222	15	 	 
+P	 	222	16	No personal or device information is collected by xxxxxxxxxxx.	 
+P	 	224	1	https://www.lansa.com/services/support.htm	 
+P	 	243	1	1024x768 - XGA	 
+P	 	244	1	768	 
+P	 	245	1	1024	 
+P	 	243	2	1280x800 - WXGA	 
+P	 	244	2	800	 
+P	 	245	2	1280	 
+P	 	243	3	1366x768 - WXGA	 
+P	 	244	3	768	 
+P	 	245	3	1366	 
+P	 	243	4	1600x900 - WXGA	 
+P	 	244	4	900	 
+P	 	245	4	1600	 
+P	 	243	5	1920x1080 - HD	 
+P	 	244	5	1080	 
+P	 	245	5	1920	 
+P	 	243	6	iPad Portrait - 768x1024	 
+P	 	244	6	1024	 
+P	 	245	6	768	 
+P	 	243	7	iPad Landscape - 1024x768	 
+P	 	244	7	768	 
+P	 	245	7	1024	 
+P	 	243	8	S Galaxy Tab Portrait 600x1024	 
+P	 	244	8	1024	 
+P	 	245	8	600	 
+P	 	243	9	S Galaxy Tab Landscape 1024x600	 
+P	 	244	9	600	 
+P	 	245	9	1024	 
+P	 	243	10	S Galaxy Tab 10.1 Portrait 800x1280	 
+P	 	244	10	1280	 
+P	 	245	10	800	 
+P	 	243	11	S Galaxy Tab 10.1 Landscape 1280x800	 
+P	 	244	11	800	 
+P	 	245	11	1280	 
+P	 	243	12	Samsung Galaxy S7 360x640	 
+P	 	244	12	640	 
+P	 	245	12	360	 
+P	 	243	13	Samsung Galaxy S7 Landscape 640x360	 
+P	 	244	13	360	 
+P	 	245	13	640	 
+P	 	243	14	Samsung Galaxy S8 360x740	 
+P	 	244	14	740	 
+P	 	245	14	360	 
+P	 	243	15	Samsung Galaxy S8 Landscape 740x360	 
+P	 	244	15	360	 
+P	 	245	15	740	 
+P	 	243	16	iPhone 7,8 375x667	 
+P	 	244	16	667	 
+P	 	245	16	375	 
+P	 	243	17	iPhone 7,8 Landscape 667x375	 
+P	 	244	17	375	 
+P	 	245	17	667	 
+P	 	243	18	iPhone 7+,8+ 414x736	 
+P	 	244	18	736	 
+P	 	245	18	414	 
+P	 	243	19	iPhone 7+,8+ Landscape 736x414	 
+P	 	244	19	414	 
+P	 	245	19	736	 
+P	 	243	20	iPhone X 375x812	 
+P	 	244	20	812	 
+P	 	245	20	375	 
+P	 	243	21	iPhone X Landscape 812x375	 
+P	 	244	21	375	 
+P	 	245	21	812	 
+P	 	248	1	TRUE	 
+P	 	249	1	1	 
+P	 	250	1	0	 
+P	 	251	1	0	 
+P	 	252	1	733	 
+B	VF_FP002O	1	0	6CDCEBBC33E645D5BE37F7D701D426F2	I
+P	 	1	1	ERP	 
+P	 	3	1	1	 
+P	 	4	1	ERP	 
+P	 	101	1	239:105:80	 
+P	 	102	1	122:117:116	 
+B	VF_FP018O	1	0	VF_FP018O_1	 
+P	 	201	1	TRUE	 
+P	 	1	1	Not Available	 
+P	 	3	1	1	 
+P	 	4	1	VF_FP018O_1	 
+B	VF_FR003O	1	0	ABF65C55E2F14056BF1EEB164A2FE9EF	I
+P	 	1	1	Contacts	 
+P	 	8	1	Contact	 
+P	 	3	1	1	 
+P	 	4	1	CONTACTS	 
+P	 	101	1	213:191:0	 
+P	 	102	1	191:0:119	 
+P	 	103	1	6CDCEBBC33E645D5BE37F7D701D426F2	 
+P	 	104	1	TRUE	 
+B	VF_FP010O	1	0	EC0DCD4F79304B17A3CFCDE064F544D1	I
+P	 	3	1	1	 
+P	 	4	1	EC0DCD4F79304B17A3CFCDE064F544D1	 
+P	 	202	1	TRUE	 
+P	 	203	1	1	 
+P	 	208	1	1E4D6164EF4A480F9B8C48ABC5630A9F	 
+P	 	209	1	GITVLF_4	 
+P	 	209	2	GITVLF_4	 
+P	 	209	3	GITVLF_4	 
+P	 	212	1	TRUE	 
+P	 	214	1	TRUE	 
+P	 	218	1	FALSE	 
+P	 	221	1	FALSE	 
+E	VF_FP010O	1	0	EC0DCD4F79304B17A3CFCDE064F544D1	 
+B	VF_FP010O	1	0	31EBA3018E9746899B688A9E3F41A19D	I
+P	 	3	1	1	 
+P	 	4	1	31EBA3018E9746899B688A9E3F41A19D	 
+P	 	203	1	1	 
+P	 	208	1	CB6148B620BF4FD7BD6676FADA709280	 
+P	 	209	1	VF_CH001O	 
+P	 	209	2	VF_CH001O	 
+P	 	209	3	VF_CH001O	 
+P	 	214	1	TRUE	 
+P	 	221	1	FALSE	 
+E	VF_FP010O	1	0	31EBA3018E9746899B688A9E3F41A19D	 
+B	VF_FP010O	1	0	F1B38E57ABD34B8EB1E323D6D503E856	I
+P	 	3	1	1	 
+P	 	4	1	F1B38E57ABD34B8EB1E323D6D503E856	 
+P	 	203	1	2	 
+P	 	204	1	NEW	 
+P	 	208	1	C4BC437F26504AFB806B7106D5EFFDA5	 
+P	 	209	1	GITVLF_4	 
+P	 	209	2	GITVLF_4	 
+P	 	209	3	GITVLF_4	 
+P	 	212	1	TRUE	 
+P	 	214	1	TRUE	 
+P	 	218	1	FALSE	 
+E	VF_FP010O	1	0	F1B38E57ABD34B8EB1E323D6D503E856	 
+B	VF_FP010O	1	0	B8F926FF2E7A4EA8BF423652F4D55548	I
+P	 	3	1	1	 
+P	 	4	1	B8F926FF2E7A4EA8BF423652F4D55548	 
+P	 	203	1	1	 
+P	 	208	1	8C0A4419D4B349DA9D45A98292AC1460	 
+P	 	209	1	VF_CH001O	 
+P	 	209	2	VF_CH001O	 
+P	 	209	3	VF_CH001O	 
+P	 	214	1	TRUE	 
+P	 	221	1	FALSE	 
+E	VF_FP010O	1	0	B8F926FF2E7A4EA8BF423652F4D55548	 
+B	VF_FP014O	1	0	EF33DDA088EB45E1BFB423B4677ACBD9	 
+P	 	1	1	All available data	 
+P	 	3	1	3	 
+P	 	4	1	EF33DDA088EB45E1BFB423B4677ACBD9	 
+P	 	5	1	 	 
+P	 	201	1	GITVLF_3	 
+P	 	201	2	GITVLF_3	 
+P	 	201	3	GITVLF_3	 
+P	 	203	1	TRUE	 
+E	VF_FP014O	1	0	EF33DDA088EB45E1BFB423B4677ACBD9	 
+B	VF_FP200O	1	0	VF_FP200O_2	 
+P	 	1	1	Last Name	 
+P	 	201	1	V	 
+P	 	202	1	1	 
+P	 	203	1	V1	 
+P	 	204	1	20	 
+P	 	209	1	False	 
+P	 	210	1	YYY	 
+E	VF_FP200O	1	0	VF_FP200O_2	 
+B	VF_FP200O	1	0	VF_FP200O_3	 
+P	 	1	1	First Name	 
+P	 	201	1	V	 
+P	 	202	1	2	 
+P	 	203	1	V2	 
+P	 	204	1	19	 
+P	 	209	1	False	 
+P	 	210	1	YYY	 
+E	VF_FP200O	1	0	VF_FP200O_3	 
+B	VF_FP200O	1	0	VF_FP200O_4	 
+P	 	1	1	Email Address	 
+P	 	201	1	A	 
+P	 	202	1	1	 
+P	 	203	1	A1	 
+P	 	204	1	20	 
+P	 	206	1	NONE	 
+P	 	207	1	DSYSFMT8	 
+P	 	208	1	A	 
+P	 	209	1	FALSE	 
+P	 	210	1	YYN	 
+E	VF_FP200O	1	0	VF_FP200O_4	 
+B	VF_FP200O	1	0	VF_FP200O_5	 
+P	 	1	1	Mobile Phone	 
+P	 	201	1	A	 
+P	 	202	1	2	 
+P	 	203	1	A2	 
+P	 	204	1	20	 
+P	 	206	1	NONE	 
+P	 	207	1	DSYSFMT8	 
+P	 	208	1	A	 
+P	 	209	1	FALSE	 
+P	 	210	1	YYN	 
+E	VF_FP200O	1	0	VF_FP200O_5	 
+B	VF_FP200O	1	0	VF_FP200O_6	 
+P	 	1	1	Job Title	 
+P	 	201	1	A	 
+P	 	202	1	4	 
+P	 	203	1	A4	 
+P	 	204	1	20	 
+P	 	206	1	NONE	 
+P	 	207	1	DSYSFMT8	 
+P	 	208	1	A	 
+P	 	209	1	FALSE	 
+P	 	210	1	YNN	 
+E	VF_FP200O	1	0	VF_FP200O_6	 
+B	VF_FP200O	1	0	VF_FP200O_7	 
+P	 	1	1	Home Phone	 
+P	 	201	1	A	 
+P	 	202	1	3	 
+P	 	203	1	A3	 
+P	 	204	1	20	 
+P	 	206	1	NONE	 
+P	 	207	1	DSYSFMT8	 
+P	 	208	1	A	 
+P	 	209	1	FALSE	 
+P	 	210	1	YYN	 
+E	VF_FP200O	1	0	VF_FP200O_7	 
+P	 	208	1	Quick search	 
+P	 	209	1	200	 
+P	 	210	1	TRUE	 
+P	 	211	1	Spreadsheet_	 
+P	 	212	1	VF_UM040O	 
+P	 	212	2	VF_UM040O	 
+P	 	212	3	VF_UM040O	 
+P	 	221	1	3	 
+P	 	223	1	TOP	 
+E	VF_FR003O	1	0	ABF65C55E2F14056BF1EEB164A2FE9EF	 
+E	VF_FP018O	1	0	VF_FP018O_1	 
+E	VF_FP002O	1	0	6CDCEBBC33E645D5BE37F7D701D426F2	 
+B	VF_FP202O	1	0	VF_FP202O_8	 
+P	 	201	0	15A464BE1807494FB00B8F8A3984F002	 
+P	 	202	1	GITVLFONE_	 
+P	 	202	2	Framework	 
+P	 	203	2	GITVLFONE_ Framework	 
+E	VF_FP202O	1	0	VF_FP202O_8	 
+B	VF_FP202O	1	0	VF_FP202O_9	 
+P	 	201	2	6CDCEBBC33E645D5BE37F7D701D426F2	 
+P	 	202	1	ERP	 
+P	 	203	1	ERP	 
+E	VF_FP202O	1	0	VF_FP202O_9	 
+B	VF_FP202O	1	0	VF_FP202O_10	 
+P	 	201	1	ABF65C55E2F14056BF1EEB164A2FE9EF	 
+P	 	202	1	Contacts	 
+P	 	203	1	Contacts	 
+E	VF_FP202O	1	0	VF_FP202O_10	 
+B	VF_FP202O	1	0	VF_FP202O_11	 
+P	 	201	1	F1B38E57ABD34B8EB1E323D6D503E856	 
+P	 	202	1	New	 
+P	 	202	2	Contact	 
+P	 	202	3	create	 
+P	 	202	4	make	 
+P	 	203	4	New Contact	 
+E	VF_FP202O	1	0	VF_FP202O_11	 
+E	VF_FP001O	1	0	15A464BE1807494FB00B8F8A3984F002	 

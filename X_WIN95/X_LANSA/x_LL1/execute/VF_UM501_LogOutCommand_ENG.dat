@@ -1,0 +1,19 @@
+* ---------------------------------------------------------------------------------
+* This is the "Log Out" command handler for framework <<FRAMEWORK>>
+* Created <<CREATEDDATE>> by <<CREATEDUSER>> with Windows desktop style controls.<<COND_NOT_MD>>
+* Created <<CREATEDDATE>> by <<CREATEDUSER>> with Material Design style controls.<<COND_MD>>  
+* Normally it executes as a hidden command from an icon on the tool bar
+* ---------------------------------------------------------------------------------
+Begin_Com Role(*EXTENDS #VF_AC010O)
+
+Mthroutine Name(uExecute) Options(*REDEFINE)
+
+* Do the ancestor thing
+Invoke Method(#Com_Ancestor.uExecute) Gotofreestate(#GotoFreeState) Switchcallerreference(#SwitchCallerReference)
+
+* Switch to exit at the framework level
+#avFrameworkManager.avSwitch Caller(#COM_OWNER) ToObjectNamed("*EXIT")
+
+Endroutine
+
+End_Com
